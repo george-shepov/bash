@@ -149,3 +149,94 @@ coverage/
 !CHANGELOG*.pdf
 !DOCS*.pdf
 !docs*.pdf
+# === SECURITY: Prevent Secret Exposure ===
+# Based on GitGuardian alerts - NEVER commit these patterns
+
+# GitHub Personal Access Tokens
+ghp_*
+github_pat_*
+gho_*
+ghu_*
+
+# Generic Private Keys (all formats)
+*private*key*
+*privatekey*
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*-key.pem
+*_key.pem
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+
+# Database Passwords and Connection Strings
+*database*password*
+*db*password*
+*mysql*password*
+*postgres*password*
+*mongodb*password*
+*redis*password*
+DATABASE_URL*
+DB_PASSWORD*
+MONGO_URI*
+REDIS_URL*
+
+# Generic Passwords (all variations)
+*password*
+*passwd*
+*pwd*
+PASSWORD*
+PASSWD*
+PWD*
+
+# Authentication Tokens
+*auth*token*
+*access*token*
+*bearer*token*
+*jwt*token*
+*api*token*
+AUTH_TOKEN*
+ACCESS_TOKEN*
+BEARER_TOKEN*
+JWT_SECRET*
+
+# API Keys (all major services)
+*api*key*
+*apikey*
+API_KEY*
+OPENAI_API_KEY*
+GOOGLE_API_KEY*
+AWS_ACCESS_KEY*
+AWS_SECRET_KEY*
+STRIPE_SECRET_KEY*
+
+# OAuth and Client Secrets
+*client*secret*
+*oauth*secret*
+CLIENT_SECRET*
+OAUTH_SECRET*
+
+# Session and Security Keys
+*session*key*
+*secret*key*
+*security*key*
+SESSION_SECRET*
+SECRET_KEY*
+SECURITY_KEY*
+
+# Configuration files that often contain secrets
+config/secrets/
+config/private/
+.env*
+*.env
+environment.prod*
+environment.staging*
+secrets.json
+private.json
+credentials.json
+
